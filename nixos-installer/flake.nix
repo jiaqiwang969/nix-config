@@ -27,7 +27,7 @@
       newConfig =
         name: disk: withSwap: swapSize:
         (nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+          system = "aarch64-linux";
           specialArgs = minimalSpecialArgs;
           modules = [
             inputs.disko.nixosModules.disko

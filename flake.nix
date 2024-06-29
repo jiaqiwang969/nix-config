@@ -52,7 +52,7 @@
     # Private secrets repo.  See ./docs/secretsmgmt.md
     # Authenticate via ssh and use shallow clone
     nix-secrets = {
-      url = "git+ssh://git@gitlab.com/emergentmind/nix-secrets.git?ref=main&shallow=1";
+      url = "git+ssh://git@gitlab.com/jiaqiwang969/nix-secrets.git?ref=main&shallow=1";
       flake = false;
     };
   };
@@ -61,8 +61,8 @@
     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
-        "x86_64-linux"
-        #"aarch64-darwin"
+        #"x86_64-linux"
+        "aarch64-darwin"
       ];
       inherit (nixpkgs) lib;
       configVars = import ./vars { inherit inputs lib; };
