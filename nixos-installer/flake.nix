@@ -31,7 +31,7 @@
           specialArgs = minimalSpecialArgs;
           modules = [
             inputs.disko.nixosModules.disko
-            (configLib.relativeToRoot "hosts/common/disks/basic-disk-config.nix")
+            (configLib.relativeToRoot "hosts/common/disks/standard-disk-config.nix")
             {
               _module.args = {
                 inherit disk withSwap swapSize;
