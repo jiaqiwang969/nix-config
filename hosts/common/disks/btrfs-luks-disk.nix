@@ -1,7 +1,7 @@
 # NOTE: ... is needed because dikso passes diskoFile
 { lib
 , pkgs
-, disk ? "/dev/vda"
+, disk ? "/dev/sda"
 , withSwap ? false
 , swapSize
 , configVars

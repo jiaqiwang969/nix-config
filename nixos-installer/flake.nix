@@ -27,7 +27,7 @@
       newConfig =
         name: disk: withSwap: swapSize:
         (nixpkgs.lib.nixosSystem {
-          system = "aarch64-linux";
+          system = "x86_64-linux";
           specialArgs = minimalSpecialArgs;
           modules = [
             inputs.disko.nixosModules.disko
@@ -49,7 +49,7 @@
       nixosConfigurations = {
         # host = newConfig "name" disk" "withSwap" "swapSize" 
         # Swap size is in GiB
-        grief = newConfig "grief" "/dev/vda" false "0";
+        grief = newConfig "grief" "/dev/nvme0n1" false "0";
         guppy = newConfig "guppy" "/dev/vda" false "0";
         gusto = newConfig "gusto" "/dev/sda" true "8";
 
