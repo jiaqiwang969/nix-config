@@ -52,7 +52,7 @@
     # Private secrets repo.  See ./docs/secretsmgmt.md
     # Authenticate via ssh and use shallow clone
     nix-secrets = {
-      url = "path:/home/ta/nixconfig/nix-secrets";
+      url = "path:/home/ta/nix-config/nix-secrets";
       flake = false;
     };
   };
