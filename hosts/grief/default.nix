@@ -12,7 +12,7 @@
 
     #################### Hardware Modules ####################
     inputs.hardware.nixosModules.common-cpu-amd
-    inputs.hardware.nixosModules.common-gpu-nvidia
+    #inputs.hardware.nixosModules.common-gpu-nvidia
     inputs.hardware.nixosModules.common-pc-ssd
 
     #################### Disk Layout ####################
@@ -31,8 +31,8 @@
 
     #################### Host-specific Optional Configs ####################
     "hosts/common/optional/yubikey"
-    "hosts/common/optional/services/clamav.nix" # depends on optional/msmtp.nix
-    "hosts/common/optional/msmtp.nix" # required for emailing clamav alerts
+    #"hosts/common/optional/services/clamav.nix" # depends on optional/msmtp.nix
+    #"hosts/common/optional/msmtp.nix" # required for emailing clamav alerts
     "hosts/common/optional/services/openssh.nix"
 
     # Desktop
@@ -50,6 +50,8 @@
   services.gnome.gnome-keyring.enable = true;
   # TODO enable and move to greetd area? may need authentication dir or something?
   # services.pam.services.greetd.enableGnomeKeyring = true;
+
+
 
   networking = {
     hostName = "grief";
@@ -82,7 +84,7 @@
       "ohci_pci"
       "ehci_pci"
       "virtio_pci"
-      "virtio_scsci"
+     # "virtio_scsci"
       "ahci"
       "usbhid"
       "sr_mod"

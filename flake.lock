@@ -241,19 +241,14 @@
     "nix-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1719806301,
-        "narHash": "sha256-SPy8u8NTYPG2idcNjvpX+2rwoyovE9+L9L/4Bn8xAks=",
-        "ref": "main",
-        "rev": "5a47340d606d2d158e5c05c4bb980e9251af668b",
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@gitlab.com/jiaqiwang969/nix-secrets.git"
+        "lastModified": 1,
+        "narHash": "sha256-SUARwPoKwPW0ohSNiaWiV+HbpMt4pRTUWay8TCcuaeE=",
+        "path": "./nix-secrets",
+        "type": "path"
       },
       "original": {
-        "ref": "main",
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@gitlab.com/jiaqiwang969/nix-secrets.git"
+        "path": "./nix-secrets",
+        "type": "path"
       }
     },
     "nixpkgs": {
