@@ -30,9 +30,9 @@
 
     # vim4LMFQR!
     nixvim = {
-      #url = "github:nix-community/nixvim/nixos-23.11";
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      url = "github:nix-community/nixvim/nixos-24.05";
+      #url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Windows management
