@@ -1,0 +1,16 @@
+# pub keys
+keys:
+  - &users:
+    - &ta age1kzs3q70jcvug8h3u8uungpp89tjhnm7w5x4v0l6q3h4yh6n8ag8s0s5nqu #primate age key
+    - &ta_grief age136c2we9mm0u8fmvsyd2w8vr4fa2zecvs56pmaew24ydvcrdrusas7e27rr
+  - &hosts: # nix-shell -p ssh-to-age --run 'cat /etc/ssh/ssh_host_ed25519_key.pub | ssh-to-age'
+    - &grief age1f4gvyv5wjsqw6s0xaht3dnyp8a983suquth3jm2ehf5f65n8xq7sxa52v2
+    - &grief age1nfw3t7n7ncr20xlrwyyl5xtvnm98w2wfemddatapvd09me36nfys37zr73
+creation_rules:
+  #path should be relative to location of this file (.sops.yaml)
+  - path_regex: secrets.yaml$
+    key_groups:
+      - age:
+        - *ta
+        - *ta_grief
+        - *grief
