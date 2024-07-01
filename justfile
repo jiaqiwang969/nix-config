@@ -1,4 +1,4 @@
-SOPS_FILE := "../nix-secrets/secrets.yaml"
+SOPS_FILE := "./nix-secrets/secrets.yaml"
 
 # default recipe to display help information
 default:
