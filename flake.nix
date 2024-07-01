@@ -24,7 +24,7 @@
 
     # Secrets management. See ./docs/secretsmgmt.md
     sops-nix = {
-      url = "github:mic92/sops-nix";
+      path = "./github:mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -52,7 +52,7 @@
     # Private secrets repo.  See ./docs/secretsmgmt.md
     # Authenticate via ssh and use shallow clone
     nix-secrets = {
-      url = "../nix-secrets";
+      url = "nix-secrets";
       flake = false;
     };
   };
