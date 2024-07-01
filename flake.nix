@@ -52,7 +52,7 @@
     # Private secrets repo.  See ./docs/secretsmgmt.md
     # Authenticate via ssh and use shallow clone
     nix-secrets = {
-      url = "git+ssh://git@gitlab.com/jiaqiwang969/nix-secrets.git?ref=main&shallow=1";
+      url = "../nix-secrets";
       flake = false;
     };
   };

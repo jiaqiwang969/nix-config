@@ -186,7 +186,7 @@ function update_sops_file() {
 		red "Invalid key type passed to update_sops_file. Must be either 'hosts' or 'users'."
 		exit 1
 	fi
-	cd "${git_root}"/../nix-secrets
+	cd "${git_root}"/nix-secrets
 
 	SOPS_FILE=".sops.yaml"
 	sed -i "{
@@ -231,7 +231,7 @@ function generate_host_age_key() {
 
 function generate_user_age_key() {
 	echo "First checking if ${target_hostname} age key already exists"
-	secret_file="${git_root}"/../nix-secrets/secrets.yaml
+	secret_file="${git_root}"/nix-secrets/secrets.yaml
 	if ! sops -d --extract '["user_age_keys"]' "$secret_file" >/dev/null ||
 		! sops -d --extract "[\"user_age_keys\"][\"${target_hostname}\"]" "$secret_file" >/dev/null 2>&1; then
 		echo "Age key does not exist. Generating."
@@ -296,7 +296,7 @@ if yes_or_no "Do you want to copy your full nix-config and nix-secrets to $targe
 	green "Copying full nix-config to $target_hostname"
 	sync "$target_user" "${git_root}/../nix-config"
 	green "Copying full nix-secrets to $target_hostname"
-	sync "$target_user" "${git_root}/../nix-secrets"
+	sync "$target_user" "${git_root}/nix-secrets"
 
 	if yes_or_no "Do you want to rebuild immediately?"; then
 		green "Rebuilding nix-config on $target_hostname"
