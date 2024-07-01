@@ -49,12 +49,6 @@
 
     #################### Personal Repositories ####################
 
-    # Private secrets repo.  See ./docs/secretsmgmt.md
-    # Authenticate via ssh and use shallow clone
-    nix-secrets = {
-      url = "path:/home/ta/nix-config/nix-secrets";
-      flake = false;
-    };
   };
 
   outputs = { self, disko, nixpkgs, home-manager, ... } @ inputs:
@@ -68,6 +62,7 @@
       configVars = import ./vars { inherit inputs lib; };
       configLib = import ./lib { inherit lib; };
       specialArgs = { inherit inputs outputs configVars configLib nixpkgs; };
+      nix-secrets = configLib.relativeToRoot ./nix-secrets;
     in
     {
       # Custom modules to enable special functionality for nixos or home-manager oriented configs.
