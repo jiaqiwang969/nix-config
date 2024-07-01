@@ -47,7 +47,7 @@ check-sops:
   scripts/check-sops.sh
 
 update-nix-secrets:
-  (cd ../nix-secrets && git fetch && git rebase) || true
+  (cd ./nix-secrets && git fetch && git rebase) || true
   nix flake lock --update-input nix-secrets
 
 iso:
