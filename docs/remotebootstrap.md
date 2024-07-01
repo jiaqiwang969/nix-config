@@ -86,7 +86,7 @@ note about this being optional in the script and that we print the manual instru
 
 3. Repeat step 2 for each yubikey you want to use.
 
-## Impermanence Setup Notes from FidgetingBits 
+## Impermanence Setup Notes from FidgetingBits
 
 FIXME: this impermanence section needs some edits. Also, publish this as a separate article authored by fbits about impermanence that the bootstrap article references. Add additional impermanence article references from roadmap refernces.keep the Change LUKS2's passphrase steps in the bootstrap instructions though.
 
@@ -107,7 +107,7 @@ Basically my requirements are:
 ### systemd initrd
 
 I have some systems with TPM and I want the option to be able to unlock luks using the TPM, which requires the use of
-`boot.initrd.systemd.enable`, as described in 
+`boot.initrd.systemd.enable`, as described in
 https://discourse.nixos.org/t/impermanence-vs-systemd-initrd-w-tpm-unlocking/25167. I realized this was a problem when I
 specified a script in `boot.initrd.postDeviceCommands` and didn't seem to be taking. The solution is to use a systemd
 service that gets started early in the boot process.

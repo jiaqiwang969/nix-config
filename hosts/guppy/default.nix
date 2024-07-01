@@ -44,11 +44,11 @@
     enableIPv6 = false;
   };
 
-	hardware.opengl = {
-		enable = true;
-		driSupport32Bit = false;
-		driSupport = true;
-	};
+  hardware.opengl = {
+    enable = true;
+    driSupport32Bit = false;
+    driSupport = true;
+  };
 
 
   boot.loader = {

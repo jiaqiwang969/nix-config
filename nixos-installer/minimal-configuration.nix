@@ -44,12 +44,12 @@
 
   environment.systemPackages = builtins.attrValues {
     inherit (pkgs)
-		  gnupg
-			vim
-			pre-commit
+      gnupg
+      vim
+      pre-commit
       wget
       curl
-			git
+      git
       rsync;
   };
 

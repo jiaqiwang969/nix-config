@@ -38,7 +38,7 @@ age-key:
   nix-shell -p age --run "age-keygen"
 
 rekey:
-  cd ../nix-secrets && (\
+  cd ./nix-secrets && (\
     sops updatekeys -y secrets.yaml && \
     (pre-commit run --all-files || true) && \
     git add -u && (git commit -m "chore: rekey" || true) && git push \
